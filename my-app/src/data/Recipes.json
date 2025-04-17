@@ -1,0 +1,160 @@
+[
+  {
+    "id": "grilled-chicken-quinoa-bowl",
+    "title": "Grilled Chicken Quinoa Bowl",
+    "description": "A hearty bowl packed with grilled chicken, quinoa, spinach, and a zesty lemon-tahini dressing.",
+    "image": "https://www.allrecipes.com/thmb/1AJft96J_BXC3ySmKM0Sg1j8NcA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-256872-Slow-Cooked-Chicken-Drumsticks-ddmfs-beauty-2x1-d8a4e256a55d464fbeb94ebe98bacf57.jpg",
+    "cookTime": 30,
+    "ingredients": [
+      "2 chicken breasts",
+      "1 cup quinoa",
+      "2 cups spinach",
+      "1/4 cup tahini",
+      "1 lemon",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Cook quinoa according to package instructions.",
+      "Grill chicken breasts until cooked through.",
+      "Mix tahini with lemon juice to make dressing.",
+      "Assemble bowl with quinoa, sliced chicken, spinach, and dressing."
+    ]
+  },
+  {
+    "id": "turkey-zoodle-skillet",
+    "title": "Turkey Zoodle Skillet",
+    "description": "Lean ground turkey, zucchini noodles, and tomatoes cooked in one pan for a quick high-protein dinner.",
+    "image": "https://images.unsplash.com/photo-1613145991416-26c3d9955c5e?auto=format&fit=crop&w=800&q=80",
+    "cookTime": 25,
+    "ingredients": [
+      "1 lb ground turkey",
+      "2 zucchini (spiralized)",
+      "1 cup cherry tomatoes",
+      "2 cloves garlic",
+      "1 tbsp olive oil",
+      "Salt, pepper, and Italian herbs"
+    ],
+    "instructions": [
+      "Sauté garlic in olive oil.",
+      "Add turkey and cook until browned.",
+      "Add cherry tomatoes and cook until soft.",
+      "Stir in zucchini noodles and cook for 3–5 minutes."
+    ]
+  },
+  {
+    "id": "tofu-veggie-stir-fry",
+    "title": "Tofu Veggie Stir Fry",
+    "description": "A protein-rich stir fry with tofu, colorful veggies, and a light soy-ginger sauce.",
+    "image": "https://images.unsplash.com/photo-1584270354949-1f7b7da6cfe0?auto=format&fit=crop&w=800&q=80",
+    "cookTime": 20,
+    "ingredients": [
+      "1 block firm tofu",
+      "1 cup broccoli",
+      "1 bell pepper",
+      "1 carrot",
+      "2 tbsp soy sauce",
+      "1 tsp grated ginger"
+    ],
+    "instructions": [
+      "Cube and pan-fry tofu until golden.",
+      "Add chopped vegetables and sauté.",
+      "Mix soy sauce and ginger and pour over stir fry.",
+      "Cook until vegetables are tender."
+    ]
+  },
+  {
+    "id": "greek-yogurt-parfait",
+    "title": "Greek Yogurt Parfait",
+    "description": "Layered Greek yogurt, berries, and granola — easy, high-protein breakfast or snack.",
+    "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=800&q=80",
+    "cookTime": 5,
+    "ingredients": [
+      "1 cup Greek yogurt",
+      "1/2 cup mixed berries",
+      "1/4 cup granola",
+      "1 tsp honey (optional)"
+    ],
+    "instructions": [
+      "Layer yogurt, berries, and granola in a glass or bowl.",
+      "Drizzle with honey if desired."
+    ]
+  },
+  {
+    "id": "egg-white-veggie-omelette",
+    "title": "Egg White Veggie Omelette",
+    "description": "Fluffy egg whites with spinach, tomatoes, and mushrooms for a low-fat, high-protein breakfast.",
+    "image": "https://images.unsplash.com/photo-1612441512488-6c1bbfba786e?auto=format&fit=crop&w=800&q=80",
+    "cookTime": 10,
+    "ingredients": [
+      "4 egg whites",
+      "1/2 cup spinach",
+      "1/4 cup diced tomatoes",
+      "1/4 cup chopped mushrooms",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Whisk egg whites and season with salt and pepper.",
+      "Pour into heated nonstick skillet.",
+      "Add veggies and cook until set.",
+      "Fold and serve."
+    ]
+  },
+  {
+    "id": "lentil-chickpea-salad",
+    "title": "Lentil Chickpea Salad",
+    "description": "A cold salad packed with plant protein from lentils and chickpeas, tossed in a lemon vinaigrette.",
+    "image": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=800&q=80",
+    "cookTime": 15,
+    "ingredients": [
+      "1 cup cooked lentils",
+      "1 cup canned chickpeas",
+      "1/2 cucumber, diced",
+      "1/4 red onion, diced",
+      "2 tbsp olive oil",
+      "1 lemon"
+    ],
+    "instructions": [
+      "Combine lentils, chickpeas, cucumber, and onion.",
+      "Mix olive oil and lemon juice to make dressing.",
+      "Toss salad with dressing and chill before serving."
+    ]
+  },
+  {
+    "id": "cottage-cheese-protein-pancakes",
+    "title": "Cottage Cheese Protein Pancakes",
+    "description": "Fluffy pancakes made with oats and cottage cheese for a delicious protein-packed start to your day.",
+    "image": "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80",
+    "cookTime": 20,
+    "ingredients": [
+      "1/2 cup cottage cheese",
+      "1/2 cup rolled oats",
+      "2 eggs",
+      "1/2 tsp baking powder",
+      "1/4 tsp cinnamon"
+    ],
+    "instructions": [
+      "Blend all ingredients until smooth.",
+      "Cook on nonstick skillet until bubbles form, then flip.",
+      "Serve warm with fresh fruit."
+    ]
+  },
+  {
+    "id": "salmon-avocado-bowl",
+    "title": "Salmon Avocado Bowl",
+    "description": "A nourishing bowl with grilled salmon, brown rice, and creamy avocado slices.",
+    "image": "https://images.unsplash.com/photo-1585238341986-56d6ff6f7e8b?auto=format&fit=crop&w=800&q=80",
+    "cookTime": 25,
+    "ingredients": [
+      "1 salmon filet",
+      "1/2 avocado",
+      "1 cup cooked brown rice",
+      "1/4 cup shredded cabbage",
+      "Soy sauce or sesame dressing"
+    ],
+    "instructions": [
+      "Grill salmon until flaky.",
+      "Assemble rice bowl with salmon, avocado, and veggies.",
+      "Drizzle with dressing of choice."
+    ]
+  }
+]
