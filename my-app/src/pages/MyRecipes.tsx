@@ -15,11 +15,27 @@ export default function MyRecipes() {
   };
 
   const [myRecipes, setMyRecipes] = useState<Recipe[]>([]);
+  const [savedIds, setSavedIds] = useState<string[]>([]);
 
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("myRecipes") || "[]");
-setMyRecipes(saved);
+    setMyRecipes(saved);
+    setSavedIds(saved.map((recipe: Recipe) => recipe.id));
   }, []);
+
+  const toggleSave = (id: string) => {
+    const updatedSavedIds = savedIds.includes(id)
+      ? savedIds.filter((savedId) => savedId !== id)
+      : [...savedIds, id];
+
+    setSavedIds(updatedSavedIds);
+
+    // Update the saved recipes in local storage
+    const updatedRecipes = myRecipes.filter((recipe) =>
+      updatedSavedIds.includes(recipe.id)
+    );
+    localStorage.setItem("myRecipes", JSON.stringify(updatedRecipes));
+  };
 
   return (
     <Container>
@@ -43,6 +59,8 @@ setMyRecipes(saved);
             title={recipe.title}
             description={recipe.description}
             image={recipe.image}
+            isSaved={savedIds.includes(recipe.id)} 
+            onToggleSave={toggleSave} 
           />
         ))}
       </div>

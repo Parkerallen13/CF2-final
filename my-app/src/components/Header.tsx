@@ -10,7 +10,6 @@ export default function Header()
             <div>
             <Text className={classes.headings}>-Parker's recipes-</Text>
             </div>
-
             <HomeButtons />
             
         </Container>

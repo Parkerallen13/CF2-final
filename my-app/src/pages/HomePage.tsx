@@ -10,10 +10,12 @@ import HomeButtons from "../components/PageButtons";
 export default function HomePage() {
   return (
     <>
+    <div className={classes.homeContainer}>
       <MantineProvider theme={RecipeTheme}>
       <Text m="lg" fz="xxl" className={classes.headings}>Welcome to Parker's Recipes!</Text>
       <HomeButtons />
       </MantineProvider>
+      </div>
     </>
   );
 }

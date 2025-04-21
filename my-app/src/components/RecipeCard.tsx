@@ -1,4 +1,4 @@
-import { Card, Container, Image, Text } from "@mantine/core";
+import { Button, Card, Container, Image, Text } from "@mantine/core";
 import classes from "../styling/Global.module.css";
 import { Link } from "react-router-dom";
 
@@ -7,6 +7,8 @@ type RecipeCardProps = {
   title: string;
   description: string;
   image: string;
+  isSaved: boolean; // Add isSaved prop
+  onToggleSave: (id: string) => void;
 };
 
 export default function RecipeCard({
@@ -14,6 +16,8 @@ export default function RecipeCard({
   title,
   description,
   image,
+  isSaved,
+  onToggleSave
 }: RecipeCardProps) {
   return (
     <Container className={classes.cardContainer}>
@@ -36,6 +40,13 @@ export default function RecipeCard({
         <Text mt="xs" c="dimmed" size="sm" >
           {description}
         </Text>
+        <Button
+          mt="md"
+          color={isSaved ? "teal" : "gray"} // Change button color based on saved state
+          onClick={() => onToggleSave(id)}
+        >
+          {isSaved ? "Saved" : "Save Recipe"}
+        </Button>
       </Card>
     </Container>
   );
