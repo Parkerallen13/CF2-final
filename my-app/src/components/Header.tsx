@@ -11,6 +11,7 @@ export default function Header()
             <Text className={classes.headings}>-Parker's recipes-</Text>
             </div>
             <HomeButtons />
+            <Button>hi</Button>
             
         </Container>
     )
