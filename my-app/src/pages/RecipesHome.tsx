@@ -3,68 +3,66 @@ import RecipeCard from "../components/RecipeCard";
 import recipes from "../data/Recipes.json";
 import Header from "../components/Header";
 import { Title } from "@mantine/core";
+import classes from '../styling/Global.module.css'
 
 export default function RecipesHome() {
-  type Recipe = {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    cookTime: number;
-    ingredients: string[];
-    instructions: string[];
-  };
+  // type Recipe = {
+  //   id: string;
+  //   title: string;
+  //   description: string;
+  //   image: string;
+  //   cookTime: number;
+  //   ingredients: string[];
+  //   instructions: string[];
+  // };
 
   const [savedIds, setSavedIds] = useState<string[]>([]);
 
+  // Load saved recipe IDs from localStorage
   useEffect(() => {
-    const stored: Recipe[] = JSON.parse(
-      localStorage.getItem("myRecipes") || "[]"
-    );
-    setSavedIds(stored.map((r) => r.id));
+    const storedIds: string[] = JSON.parse(localStorage.getItem("savedRecipeIds") || "[]");
+    setSavedIds(storedIds);
   }, []);
 
+  // Toggle save/unsave for recipe IDs only
   const toggleSave = (id: string) => {
-    const recipe = recipes.find((r) => r.id === id);
-    if (!recipe) return;
-
-    const currentSaved: Recipe[] = JSON.parse(
-      localStorage.getItem("myRecipes") || "[]"
-    );
-
-    let updated: Recipe[];
+    let updatedIds: string[];
 
     if (savedIds.includes(id)) {
-      updated = currentSaved.filter((r) => r.id !== id);
+      updatedIds = savedIds.filter((savedId) => savedId !== id);
     } else {
-      updated = [...currentSaved, recipe];
+      updatedIds = [...savedIds, id];
     }
 
-    localStorage.setItem("myRecipes", JSON.stringify(updated));
-    setSavedIds(updated.map((r) => r.id));
+    localStorage.setItem("savedRecipeIds", JSON.stringify(updatedIds));
+    setSavedIds(updatedIds);
   };
+
+  
+
   return (
     <>
       <Header />
-      <Title order={2} mb="lg">
+      <Title order={2} className={classes.title}>
         Recipes
       </Title>
-      <div  style={{
-          display: "flex",
-          overflowX: "auto",
-          gap: "1.5rem",
-          paddingBottom: "1rem"
-        }}>
-        {recipes.map((recipe, index) => (
-          <RecipeCard
-            key={index}
-            id={recipe.id}
-            title={recipe.title}
-            description={recipe.description}
-            image={recipe.image}
-            onToggleSave={toggleSave}
-            isSaved={savedIds.includes(recipe.id)}
-          />
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(3, 1fr)",
+        gap: "1.5rem",
+        paddingBottom: "1rem",
+      }}>
+        {recipes.map((recipe) => (
+          <div className="card" key={recipe.id} style={{ margin: "1.5rem" }}>
+            <RecipeCard
+              id={recipe.id}
+              title={recipe.title}
+              description={recipe.description}
+              image={recipe.image}
+              onToggleSave={toggleSave}
+              isSaved={savedIds.includes(recipe.id)}
+            />
+          </div>
         ))}
       </div>
     </>

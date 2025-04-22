@@ -7,8 +7,9 @@ type RecipeCardProps = {
   title: string;
   description: string;
   image: string;
-  isSaved: boolean; // Add isSaved prop
+  isSaved: boolean;
   onToggleSave: (id: string) => void;
+  onDelete: (id: string) => void; // Function to handle deletion
 };
 
 export default function RecipeCard({
@@ -17,7 +18,8 @@ export default function RecipeCard({
   description,
   image,
   isSaved,
-  onToggleSave
+  onToggleSave,
+  onDelete, // Destructure the onDelete function
 }: RecipeCardProps) {
   return (
     <Container className={classes.cardContainer}>
@@ -37,17 +39,26 @@ export default function RecipeCard({
           {title}
         </Text>
 
-        <Text mt="xs" c="dimmed" size="sm" >
+        <Text mt="xs" c="dimmed" size="sm">
           {description}
         </Text>
         <Button
-        mt="md"
-        variant="filled"
-        color={isSaved ? "grape" : "blue"}
-        onClick={() => onToggleSave(id)}
-      >
-        {isSaved ? "Saved" : "Save"}
-      </Button>
+          mr="md"
+          variant="filled"
+          color={isSaved ? "grape" : "blue"}
+          onClick={() => onToggleSave(id)}
+        >
+          {isSaved ? "Saved" : "Save"}
+        </Button>
+
+        <Button
+          // mt="md"
+          variant="outline"
+          color="red"
+          onClick={() => onDelete(id)} // Call onDelete when clicked
+        >
+          Delete
+        </Button>
       </Card>
     </Container>
   );

@@ -1,69 +1,63 @@
-import { useEffect, useState } from "react";
 import { Container, Title } from "@mantine/core";
-import RecipeCard from "../components/RecipeCard";
+import { useEffect, useState } from "react";
+import MyRecipeCard from "../components/MyRecipeCard";
 import Header from "../components/Header";
 
-export default function MyRecipes() {
-  type Recipe = {
-    id: string;
-    title: string;
-    description: string;
-    image: string;
-    cookTime: number;
-    ingredients: string;
-    instructions: string;
-  };
+interface Recipe {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  isSaved?: boolean; // Optional, since not every recipe might have `isSaved` initially
+}
 
-  const [myRecipes, setMyRecipes] = useState<Recipe[]>([]);
-  const [savedIds, setSavedIds] = useState<string[]>([]);
+export default function MyRecipes() {
+  const [recipes, setRecipes] = useState<Recipe[]>([]);
 
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("myRecipes") || "[]");
-    setMyRecipes(saved);
-    setSavedIds(saved.map((recipe: Recipe) => recipe.id));
+    // Load recipes from localStorage
+    const savedRecipes = JSON.parse(localStorage.getItem("myRecipes") || "[]");
+    setRecipes(savedRecipes);
   }, []);
 
+  // Handle toggling the save state of a recipe
   const toggleSave = (id: string) => {
-    const updatedSavedIds = savedIds.includes(id)
-      ? savedIds.filter((savedId) => savedId !== id)
-      : [...savedIds, id];
+    const updatedRecipes = recipes.map((recipe) => {
+      if (recipe.id === id) {
+        return { ...recipe, isSaved: !recipe.isSaved }; // Toggle the isSaved state
+      }
+      return recipe;
+    });
 
-    setSavedIds(updatedSavedIds);
+    setRecipes(updatedRecipes);
+    localStorage.setItem("myRecipes", JSON.stringify(updatedRecipes)); // Save the updated recipes to localStorage
+  };
 
-    // Update the saved recipes in local storage
-    const updatedRecipes = myRecipes.filter((recipe) =>
-      updatedSavedIds.includes(recipe.id)
-    );
-    localStorage.setItem("myRecipes", JSON.stringify(updatedRecipes));
+  // Handle deleting a recipe
+  const deleteRecipe = (id: string) => {
+    const updatedRecipes = recipes.filter((recipe) => recipe.id !== id); // Remove the recipe from the array
+    setRecipes(updatedRecipes); // Update the state
+    localStorage.setItem("myRecipes", JSON.stringify(updatedRecipes)); // Remove the recipe from localStorage
   };
 
   return (
     <Container>
-      <Header />
-
-      <Title order={2} mb="lg">
+      <Header/>
+      <Title order={2} my="lg">
         My Recipes
       </Title>
-      <div
-        style={{
-          display: "flex",
-          overflowX: "auto",
-          gap: "1.5rem",
-          paddingBottom: "1rem",
-        }}
-      >
-        {myRecipes.map((recipe) => (
-          <RecipeCard
-            key={recipe.id}
-            id={recipe.id}
-            title={recipe.title}
-            description={recipe.description}
-            image={recipe.image}
-            isSaved={savedIds.includes(recipe.id)} 
-            onToggleSave={toggleSave} 
-          />
-        ))}
-      </div>
+      {recipes.map((recipe) => (
+        <MyRecipeCard
+          key={recipe.id}
+          id={recipe.id}
+          title={recipe.title}
+          description={recipe.description}
+          image={recipe.image}
+          isSaved={recipe.isSaved || false} // Default to false if no isSaved exists
+          onToggleSave={toggleSave} // Pass toggleSave function to RecipeCard
+          onDelete={deleteRecipe} // Pass deleteRecipe function to RecipeCard
+        />
+      ))}
     </Container>
   );
 }

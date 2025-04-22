@@ -8,11 +8,9 @@ export default function Header()
     return (
         <Container>
             <div>
-            <Text className={classes.headings}>-Parker's recipes-</Text>
+            <Text className={classes.headings}>-Parker's Recipes-</Text>
             </div>
-            <HomeButtons />
-            <Button>hi</Button>
-            
+            <HomeButtons />            
         </Container>
     )
 }

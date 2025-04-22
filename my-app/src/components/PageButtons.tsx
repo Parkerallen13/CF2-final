@@ -24,8 +24,14 @@ export default function HomeButtons() {
       >
         My Recipes
       </Button>
+      <Button
+        onClick={() => navigate("/favorites")}
+        className={classes.button}
+      >
+        Saved
+      </Button>
       <Button onClick={() => navigate("/addrecipe")} className={classes.button}>
-        Add recipe
+        Add Recipe
       </Button>
     </SimpleGrid>
   );

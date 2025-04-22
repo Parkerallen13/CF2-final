@@ -8,9 +8,8 @@ import {
   FileInput,
   TextInput,
 } from "@mantine/core";
-
 import { useNavigate } from "react-router-dom";
-import classes from '../styling/Global.module.css'
+import classes from "../styling/Global.module.css";
 
 export default function AddRecipe() {
   const navigate = useNavigate();
@@ -23,14 +22,19 @@ export default function AddRecipe() {
       ingredients: "",
       instructions: "",
     },
-      validate: {
-    image: (value) => (value ? null : "Please upload an image"),
-  },
+    validate: {
+      title: (value) => (value ? null : "Please provide a title"),
+      ingredients: (value) => (value ? null : "Please list the ingredients"),
+      instructions: (value) => (value ? null : "Please provide instructions"),
+    },
   });
 
   const handleSubmit = async (values: typeof form.values) => {
+    // Check if form validation passes
+    if (!form.isValid()) return;
+
     const current = JSON.parse(localStorage.getItem("myRecipes") || "[]");
-  
+
     // Convert image file to base64 (if an image is uploaded)
     let imageBase64 = "";
     if (values.image) {
@@ -42,19 +46,23 @@ export default function AddRecipe() {
         reader.readAsDataURL(file);
       });
     }
-  
+
     const newRecipe = {
       id: values.title.toLowerCase().replace(/\s+/g, "-"),
       ...values,
-      image: imageBase64,
+      image: imageBase64 || "", // If no image is uploaded, set image to an empty string
     };
-  
+
+    // Save the new recipe to localStorage
     localStorage.setItem("myRecipes", JSON.stringify([...current, newRecipe]));
+
+    // Redirect to "My Recipes" page after adding the recipe
     navigate("/my-recipes");
   };
 
   return (
     <Container className={classes.addRecipeContainer}>
+      <Button style={{color:"blue", backgroundColor:"#BAD79B"}} onClick={() => navigate("/my-recipes")}>View My Recipes</Button>
       <Title order={2} my="lg">
         Add a New Recipe
       </Title>
@@ -68,7 +76,7 @@ export default function AddRecipe() {
           />
           <FileInput
             accept="image/png,image/jpeg"
-            label="Upload files"
+            label="Upload Image (optional)"
             placeholder="^"
             {...form.getInputProps("image")}
           />
