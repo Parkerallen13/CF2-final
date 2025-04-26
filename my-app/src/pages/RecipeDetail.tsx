@@ -4,7 +4,14 @@ import { Container, Title, Text, Image } from "@mantine/core";
 import classes from '../styling/Global.module.css'
 
 export default function RecipeDetail() {
+
+  // reads the url of the page and finds the "id" that comes after "recipe" and stores it in useParams()
+
   const { id } = useParams<{ id: string }>();
+
+  // goes through all possible recipes and when it finds the recipe with the id that is the same as the id in the URL, it is stored in "recipe"
+  // "recipe" holds all elements within the last {} in the Json. (id, Title, InputDescription, etc)
+
   const recipe = recipes.find((r) => r.id === id);
 
   if (!recipe) {
@@ -18,7 +25,7 @@ export default function RecipeDetail() {
       <div className={classes.bodyText}>
       <Text size="lg">Cook Time: {recipe.cookTime} mins</Text>
       <Text size="lg">Ingredients: {recipe.ingredients}</Text>
-      <Text size="lg">Instructions:{recipe.instructions}</Text>
+      <Text size="lg">Instructions: {recipe.instructions}</Text>
       </div>
     </Container>
   );

@@ -6,15 +6,6 @@ import { Title } from "@mantine/core";
 import classes from '../styling/Global.module.css'
 
 export default function RecipesHome() {
-  // type Recipe = {
-  //   id: string;
-  //   title: string;
-  //   description: string;
-  //   image: string;
-  //   cookTime: number;
-  //   ingredients: string[];
-  //   instructions: string[];
-  // };
 
   const [savedIds, setSavedIds] = useState<string[]>([]);
 
@@ -49,7 +40,7 @@ export default function RecipesHome() {
       <div style={{
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "1.5rem",
+        // gap: ".3rem",
         paddingBottom: "1rem",
       }}>
         {recipes.map((recipe) => (

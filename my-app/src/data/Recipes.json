@@ -3,14 +3,14 @@
     "id": "grilled-chicken-quinoa-bowl",
     "title": "Grilled Chicken Quinoa Bowl",
     "description": "A hearty bowl packed with grilled chicken, quinoa, spinach, and a zesty lemon-tahini dressing.",
-    "image": "https://www.allrecipes.com/thmb/1AJft96J_BXC3ySmKM0Sg1j8NcA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-256872-Slow-Cooked-Chicken-Drumsticks-ddmfs-beauty-2x1-d8a4e256a55d464fbeb94ebe98bacf57.jpg",
+    "image": "https://fedandfit.com/wp-content/uploads/2022/02/230516_chicken-quinoa-bowls-7.jpg",
     "cookTime": 30,
     "ingredients": [
-      "2 chicken breasts",
-      "1 cup quinoa",
-      "2 cups spinach",
-      "1/4 cup tahini",
-      "1 lemon",
+      "2 chicken breasts, ",
+      "1 cup quinoa, ",
+      "2 cups spinach, ",
+      "1/4 cup tahini, ",
+      "1 lemon, ",
       "Salt and pepper"
     ],
     "instructions": [
@@ -20,32 +20,31 @@
       "Assemble bowl with quinoa, sliced chicken, spinach, and dressing."
     ]
   },
-  {
-    "id": "turkey-zoodle-skillet",
-    "title": "Turkey Zoodle Skillet",
-    "description": "Lean ground turkey, zucchini noodles, and tomatoes cooked in one pan for a quick high-protein dinner.",
-    "image": "https://images.unsplash.com/photo-1613145991416-26c3d9955c5e?auto=format&fit=crop&w=800&q=80",
-    "cookTime": 25,
-    "ingredients": [
-      "1 lb ground turkey",
-      "2 zucchini (spiralized)",
-      "1 cup cherry tomatoes",
-      "2 cloves garlic",
-      "1 tbsp olive oil",
-      "Salt, pepper, and Italian herbs"
-    ],
-    "instructions": [
-      "Sauté garlic in olive oil.",
-      "Add turkey and cook until browned.",
-      "Add cherry tomatoes and cook until soft.",
-      "Stir in zucchini noodles and cook for 3–5 minutes."
-    ]
-  },
+ {
+  "id": "chocolate-quinoa-crunch-cups",
+  "title": "Chocolate Quinoa Crunch Cups",
+  "description": "Crunchy puffed quinoa cups coated in dark chocolate and topped with a tahini-lemon drizzle.",
+  "image": "https://i0.wp.com/saltnsprinkles.com/wp-content/uploads/2022/06/healthyreesescupsvegan-2.jpg?resize=2048%2C2048&ssl=1",
+  "cookTime": 30,
+  "ingredients": [
+    "1 cup puffed quinoa",
+    "1/2 cup dark chocolate chips",
+    "1 tbsp tahini",
+    "1 tsp lemon zest",
+    "Pinch of sea salt"
+  ],
+  "instructions": [
+    "Melt chocolate and stir in puffed quinoa.",
+    "Spoon mixture into mini muffin liners.",
+    "Mix tahini with lemon zest and drizzle on top.",
+    "Chill until set."
+  ]
+},
   {
     "id": "tofu-veggie-stir-fry",
     "title": "Tofu Veggie Stir Fry",
     "description": "A protein-rich stir fry with tofu, colorful veggies, and a light soy-ginger sauce.",
-    "image": "https://images.unsplash.com/photo-1584270354949-1f7b7da6cfe0?auto=format&fit=crop&w=800&q=80",
+    "image": "https://www.skinnytaste.com/wp-content/uploads/2021/09/Tofu-Stir-Fry-8.jpg",
     "cookTime": 20,
     "ingredients": [
       "1 block firm tofu",
@@ -83,7 +82,7 @@
     "id": "egg-white-veggie-omelette",
     "title": "Egg White Veggie Omelette",
     "description": "Fluffy egg whites with spinach, tomatoes, and mushrooms for a low-fat, high-protein breakfast.",
-    "image": "https://images.unsplash.com/photo-1612441512488-6c1bbfba786e?auto=format&fit=crop&w=800&q=80",
+    "image": "https://www.garlicandzest.com/wp-content/uploads/2023/07/egg-white-omelet-17.jpg",
     "cookTime": 10,
     "ingredients": [
       "4 egg whites",
@@ -103,7 +102,7 @@
     "id": "lentil-chickpea-salad",
     "title": "Lentil Chickpea Salad",
     "description": "A cold salad packed with plant protein from lentils and chickpeas, tossed in a lemon vinaigrette.",
-    "image": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=800&q=80",
+    "image": "https://toshistable.com/wp-content/uploads/2024/04/mediterranean-lentil-salad-13.jpg",
     "cookTime": 15,
     "ingredients": [
       "1 cup cooked lentils",
@@ -123,7 +122,7 @@
     "id": "cottage-cheese-protein-pancakes",
     "title": "Cottage Cheese Protein Pancakes",
     "description": "Fluffy pancakes made with oats and cottage cheese for a delicious protein-packed start to your day.",
-    "image": "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80",
+    "image": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fit,w_730,h_913/k%2Farchive%2F1083aeaa2ec2a576b5fbb23eb4e6a6088d48965f",
     "cookTime": 20,
     "ingredients": [
       "1/2 cup cottage cheese",
@@ -142,7 +141,7 @@
     "id": "salmon-avocado-bowl",
     "title": "Salmon Avocado Bowl",
     "description": "A nourishing bowl with grilled salmon, brown rice, and creamy avocado slices.",
-    "image": "https://images.unsplash.com/photo-1585238341986-56d6ff6f7e8b?auto=format&fit=crop&w=800&q=80",
+    "image": "https://tastesbetterfromscratch.com/wp-content/uploads/2023/05/Salmon-Bowls-1-300x300.jpg",
     "cookTime": 25,
     "ingredients": [
       "1 salmon filet",
@@ -156,5 +155,120 @@
       "Assemble rice bowl with salmon, avocado, and veggies.",
       "Drizzle with dressing of choice."
     ]
-  }
+  },
+    {
+      "id": "strawberry-basil-coconut-bars",
+      "title": "Strawberry Basil Coconut Bars",
+      "description": "A refreshing raw bar made with coconut, strawberries, and a subtle herbal kick from fresh basil. Full of fiber and skin-loving antioxidants.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEbR4ah4KzRwVhnS7O_z7fweePEdtXRurU8Q&s",
+      "cookTime": 25,
+      "ingredients": [
+        "1 cup unsweetened shredded coconut",
+        "1/2 cup fresh strawberries",
+        "1 tbsp coconut oil",
+        "2 tsp chopped basil",
+        "1 tsp maple syrup"
+      ],
+      "instructions": [
+        "Blend all ingredients into a thick paste.",
+        "Press into a lined pan.",
+        "Chill for 2+ hours before slicing."
+      ]
+    },
+    {
+      "id": "ginger-tofu-chocolate-mousse",
+      "title": "Ginger Tofu Chocolate Mousse",
+      "description": "Creamy chocolate mousse made with protein-rich silken tofu, fresh ginger, and cocoa. A gut-friendly, anti-inflammatory treat.",
+      "image": "https://www.atastylovestory.com/wp-content/uploads/2023/01/61810d39e281e2d08d6baded5d8cdeef-150x150.jpg",
+      "cookTime": 20,
+      "ingredients": [
+        "1 block silken tofu",
+        "1/4 cup cocoa powder",
+        "2 tbsp maple syrup",
+        "1/2 tsp grated ginger",
+        "1/2 tsp vanilla extract"
+      ],
+      "instructions": [
+        "Blend all ingredients until smooth.",
+        "Spoon into serving cups.",
+        "Chill for at least 1 hour."
+      ]
+    },
+    {
+      "id": "coconut-yogurt-berry-bites",
+      "title": "Coconut Yogurt Berry Bites",
+      "description": "Frozen bites of coconut yogurt with berries and a sprinkle of granola. Packed with probiotics and antioxidants for glowing skin.",
+      "image": "https://feastingonfruit.com/wp-content/uploads/2023/01/Dairy-Free-Frozen-Yogurt-Bites-2.jpg",
+      "cookTime": 5,
+      "ingredients": [
+        "1 cup coconut yogurt",
+        "1/2 cup mixed berries",
+        "1/4 cup grain-free granola",
+        "1 tsp honey (optional)"
+      ],
+      "instructions": [
+        "Spoon yogurt into mini silicone molds.",
+        "Top with berries and granola.",
+        "Freeze until solid."
+      ]
+    },
+    {
+      "id": "coconut-meringue-clouds",
+      "title": "Coconut Meringue Clouds",
+      "description": "Light and airy meringue cookies with a coconut twist. Naturally low in calories and sugar-free if using monk fruit or stevia.",
+      "image": "https://www.cooklikeczechs.com/wp-content/uploads/2021/10/coconut-meringue-cookies-czech-kokosky.jpg",
+      "cookTime": 10,
+      "ingredients": [
+        "4 egg whites",
+        "1/4 tsp cream of tartar",
+        "2 tbsp coconut sugar or stevia",
+        "1/4 tsp vanilla extract",
+        "1 tbsp shredded coconut"
+      ],
+      "instructions": [
+        "Whip egg whites with cream of tartar until foamy.",
+        "Gradually add sweetener and vanilla; beat to stiff peaks.",
+        "Fold in coconut. Pipe onto baking sheet.",
+        "Bake at 225°F for 1 hour. Cool in oven."
+      ]
+    },
+    {
+      "id": "lemon-chickpea-blondies",
+      "title": "Lemon Chickpea Blondies",
+      "description": "Moist, fudgy blondies made with chickpeas, almond flour, and lemon zest. Naturally gluten-free and protein-packed.",
+      "image": "https://www.rainbownourishments.com/wp-content/uploads/2023/07/chickpea-blondies-1.jpg",
+      "cookTime": 15,
+      "ingredients": [
+        "1 cup canned chickpeas (rinsed)",
+        "1/4 cup almond flour",
+        "2 tbsp maple syrup",
+        "Zest of 1 lemon",
+        "1/2 tsp baking powder",
+        "Pinch of salt"
+      ],
+      "instructions": [
+        "Blend all ingredients into a thick batter.",
+        "Spread into lined baking dish.",
+        "Bake at 350°F for 20 mins."
+      ]
+    },
+    {
+      "id": "banana-oat-protein-cakes",
+      "title": "Banana Oat Protein Cakes",
+      "description": "Mini pancake-style cakes made with banana, oats, and vanilla protein — soft, sweet, and nourishing for your skin and energy levels.",
+      "image": "https://www.thewholesomefork.com/wp-content/uploads/2015/09/Banana-oat-pancakes-new-2.jpg",
+      "cookTime": 20,
+      "ingredients": [
+        "1 banana",
+        "1/2 cup rolled oats",
+        "1/4 cup plant-based protein powder",
+        "1 egg or flax egg",
+        "1/2 tsp cinnamon"
+      ],
+      "instructions": [
+        "Blend all ingredients into batter.",
+        "Spoon onto nonstick skillet and cook 2-3 mins per side.",
+        "Serve plain or with a drizzle of almond butter."
+      ]
+    }
 ]
