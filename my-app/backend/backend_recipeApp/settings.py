@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'backend_recipeApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-        'USER': 'myuser',
-        'PASSWORD': 'mypassword',
-        'HOST': 'host.docker.internal',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'parker-database',
+        'USER': 'parker-username',
+        'PASSWORD': 'parker-password',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
