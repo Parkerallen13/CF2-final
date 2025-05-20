@@ -1,30 +1,30 @@
-from django.shortcuts import render
 from django.http import JsonResponse
 import datetime
 
 # Create your views here.
 
 from rest_framework import viewsets
-from .models import Note
-from .serializers import NoteSerializer
+from rest_framework.views import APIView
+
+from .models import Note, Recipe
+from .serializers import NoteSerializer, RecipeSerializer
 
 class NoteViewSet(viewsets.ModelViewSet):
     queryset = Note.objects.all()
     serializer_class = NoteSerializer
 
-from rest_framework.views import APIView
-# from rest_framework.response import Response
-
-from rest_framework.views import APIView
-from rest_framework.response import Response  # optionally use this
-
-class HelloAPI(APIView):
+class hello_api(APIView):
     def get(self, request):
         return JsonResponse({"message": "first api call"})
     
-class TimeAPI(APIView):
+class TimeApi(APIView):
     def get(self, request):
         now = datetime.datetime.now()
         return JsonResponse({
             "current-time": now.strftime("%A, %B %d. %I:%M %P")
         })
+    
+class RecipeViewSet(viewsets.ModelViewSet):
+    queryset = Recipe.objects.all()
+    serializer_class = RecipeSerializer
+    

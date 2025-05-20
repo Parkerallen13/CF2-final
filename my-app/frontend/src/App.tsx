@@ -9,6 +9,7 @@ import RecipeDetail from "./pages/RecipeDetail";
 import Favorites from "./pages/Favorites";
 import MyRecipeDetail from "./pages/MyRecipeDetail";
 import RecentlyViewed from "./pages/RecentlyViewed";
+import APITest from "./pages/APITest";
 
 import "./App.css";
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/my-recipes/:id" element={<MyRecipeDetail />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/recentlyViewed" element={<RecentlyViewed />} />
+          <Route path="/API" element={< APITest/>} />
           <Route path="*" element={<p>404 not found</p>} />
         </Routes>
       </MantineProvider>

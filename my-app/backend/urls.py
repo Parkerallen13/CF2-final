@@ -4,7 +4,7 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),  # <-- add this
-    path('api/hello/', views.HelloAPI.as_view(), name='hello_api'),
+    path('app/', include('app.urls')),  # <-- add this
+    path('app/hello/', views.HelloAPI.as_view(), name='hello_api'),
 
 ]

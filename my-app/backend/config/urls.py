@@ -1,5 +1,5 @@
 """
-URL configuration for backend_recipeApp project.
+URL configuration for config project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -17,22 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
+    path('', include('app.urls')),
+    path('api/', include('app.urls')),
     path('admin/', admin.site.urls),
 ]
 
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from api.views import NoteViewSet
-from api.views import NoteViewSet, HelloAPI
 
-router = DefaultRouter()
-router.register(r'notes', NoteViewSet)
 
-urlpatterns = [
-    path('', include(router.urls)),
-    path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
-    path('api/hello/', HelloAPI.as_view())
-]
+
+

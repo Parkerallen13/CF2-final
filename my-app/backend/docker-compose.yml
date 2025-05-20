@@ -5,9 +5,9 @@ services:
     image: postgres
     restart: always
     environment:
-      POSTGRES_DB: mydb
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: parker-database
+      POSTGRES_USER: parker-username
+      POSTGRES_PASSWORD: parker-password
     ports:
       - "5432:5432"
 
@@ -21,7 +21,16 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_NAME=mydb
-      - DATABASE_USER=myuser
-      - DATABASE_PASSWORD=mypassword
+      - DATABASE_NAME=parker-database
+      - DATABASE_USER=parker-username
+      - DATABASE_PASSWORD=parker-password
       - DATABASE_HOST=db
+
+  backend-web:
+      build: .
+      ports: 
+        - "5051:5000"
+      env_file:
+        - .env
+      depends_on:
+        - db

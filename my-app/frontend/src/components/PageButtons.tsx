@@ -31,16 +31,13 @@ export default function HomeButtons() {
         >
           Saved
         </Button>
-      {/* <Button
-        onClick={() => navigate("/my-recipes")}
-        className={classes.button}
-      >
-        My Recipes
-      </Button> */}
-     
-      {/* <Button onClick={() => navigate("/addrecipe")} className={classes.button}>
-        Add Recipe
-      </Button> */}
+           <Button
+          onClick={() => navigate("/API")}
+          className={classes.button}
+        >
+          API Test
+        </Button>
+  
     </SimpleGrid>
   );
 }
