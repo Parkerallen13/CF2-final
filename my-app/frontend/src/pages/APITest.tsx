@@ -2,6 +2,7 @@ import { Button } from '@mantine/core';
 import { useNavigate } from "react-router-dom";
 import classes from "../styling/Global.module.css";
 import React from 'react'
+import RecipeFetcher from '../components/RecipeFetcher';
 
 import { useState } from 'react';
 
@@ -60,6 +61,7 @@ export default function APITest() {
    {loading ? 'Loading...' : 'Click to Call API'}</Button>
    {apiResponse && <p>API Response: {apiResponse}</p>}
    {error && <p>Error: {error}</p>}
+   <RecipeFetcher/>
     </>
   );
 }

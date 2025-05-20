@@ -14,7 +14,7 @@ type RecipeCardProps = {
 export default function RecipeCard({
   id,
   title,
-  description,
+  // description,
   image,
   isSaved,
   onToggleSave,
@@ -35,9 +35,9 @@ export default function RecipeCard({
           {title}
         </Text>
 
-        <Text mt="xs" c="dimmed" size="sm">
+        {/* <Text mt="xs" c="dimmed" size="sm">
           {description}
-        </Text>
+        </Text> */}
         <Button
           m="md"
           variant="filled"
